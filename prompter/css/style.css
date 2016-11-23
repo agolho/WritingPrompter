@@ -1,0 +1,18 @@
+
+html {
+  background: url(../bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body{
+    margin:20px;
+    background-color: rgba(255,255,255,0.65);
+}
+.spacer {
+    margin-top: 40px; /* define margin as you see fit */
+}
+.spacer-final{
+  margin-top: 100px;
+}

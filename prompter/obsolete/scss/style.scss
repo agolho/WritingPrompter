@@ -1,0 +1,60 @@
+$colour1 : #F8F8F2;
+$colour2 : #BED6FF;
+$colour3 : #E6DB74;
+$colour4 : #79ABFF;
+$colour5 : #272822;
+
+.section{
+  background-color:transparent;
+}
+html {
+  background: url(http://i.imgur.com/aQK5AhD.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+div
+{
+  background-color:transparent !important;
+}
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+btn{
+  padding:30px;
+  text-align:center;
+}
+btn-sml{
+ padding-top:60px;
+}
+
+h1{
+  color: $colour5;
+    font-family: 'Raleway', sans-serif;
+  text-align:center;
+  padding:40px;
+}
+.parent {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  margin: 20px auto;
+}
+.child {
+  @include centerer;
+  padding: 20px;
+}
+.obliques{
+  color: $colour5;
+    font-family: 'Cabin Condensed', sans-serif;
+  text-size: large;
+}
+.prompts{
+  color: $colour1;
+    font-family: 'Raleway', sans-serif;
+  font-size: x-large;
+}
