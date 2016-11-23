@@ -5,7 +5,7 @@ window.onload = function(){generateprompt();};
 
 function generateprompt(){
 var e=document.getElementById('sorting');
-var sorting = e.options[e.selectedIndex].value;
+sorting = e.options[e.selectedIndex].value;
 $.getJSON(
 "https://www.reddit.com/r/WritingPrompts/search.json?q=flair%3A(Writing+Prompt)&sort="+sorting+"&restrict_sr=on&t=week",
 function foo(data)
