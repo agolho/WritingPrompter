@@ -1,15 +1,13 @@
 var arra = [];
-var rand ="randomstring";
 var rddt = 0;
-var tbns = 0;
-var maxtbns = 14;
-var maxrddts = 10;
+var sorting="top"
 window.onload = function(){generateprompt();};
-window.onload = function(){generateObliques();};
 
 function generateprompt(){
+var e=document.getElementById('sorting');
+var sorting = e.options[e.selectedIndex].value;
 $.getJSON(
-"https://www.reddit.com/r/WritingPrompts/search.json?q=flair%3A(Writing+Prompt)&sort=new&restrict_sr=on&t=all",
+"https://www.reddit.com/r/WritingPrompts/search.json?q=flair%3A(Writing+Prompt)&sort="+sorting+"&restrict_sr=on&t=week",
 function foo(data)
 {
   $.each(
@@ -20,8 +18,9 @@ function foo(data)
           item += '<a href="//reddit.com' + post.data.permalink ;
       item = item.replace('[WP]','');
       item = item.replace('[wp]','');
+      item = item.replace('[WP]: ','');
+      item = item.replace('[wp]: ','');
       arra.push(item);
-     // $("#reddit .posts").append(item);
     }
   )
 }
@@ -35,7 +34,6 @@ function foo(data)
 
 function postPrompt(){
   var rand = arra[Math.floor(Math.random() * arra.length)];
-  //console.log(rand);
   $("#reddit .prompts").html(rand);
 }
 

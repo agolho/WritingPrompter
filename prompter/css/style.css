@@ -9,6 +9,7 @@ html {
 body{
     margin:20px;
     background-color: rgba(255,255,255,0.65);
+
 }
 .spacer {
     margin-top: 40px; /* define margin as you see fit */
@@ -16,3 +17,21 @@ body{
 .spacer-final{
   margin-top: 100px;
 }
+.obliques{
+    font-size: x-large;
+    font-weight: bold;
+}
+.prompts{
+  font-size: x-large;
+}
+
+.btn-flex {
+  display: flex;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+  .btn-flex .btn:first-child {
+    flex-grow: 1;
+    text-align: left;
+  }
